@@ -1,0 +1,44 @@
+import React, {useState} from "react"
+import {Formik, Field, Form, ErrorMessage} from "formik"
+import * as yup from "yup"
+import axios from "axios"
+
+export const CreatePost = () => {
+  const [username, setUsername] = useState("Barbara Ninos")
+
+  const validationSchema = yup.object().shape({
+    title: yup.string("Enter the title").required("Title is required").required(),
+    author: yup.string("Enter the author").required("Author is required").required(),
+    postText: yup.string("Enter the post").required("Post is required").required()
+  })
+
+  const initialValues = {
+    title: "",
+    username: "Barbara Ninos",
+    author: "",
+    postText: ""
+  }
+
+  const onSubmit = (data) => {
+    axios.post("http://localhost:3001/posts", data).then((response) => {
+      console.log("It worked", {data})
+    })
+  }
+
+  return (
+    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+      <Form>
+        <label htmlFor="inputAddTitle">Title</label>
+        <ErrorMessage name="title" component="span" />
+        <Field id="inputAddTitle" name="title" placeholder="Enter title" type="text" />
+        <label htmlFor="inputAddAuthor">Author</label>
+        <ErrorMessage name="author" component="span" />
+        <Field id="inputAddAuthor" name="author" placeholder="Enter author" type="text" />
+        <label htmlFor="inputAddPostText">Post</label>
+        <ErrorMessage name="postText" component="span" />
+        <Field id="inputAddPostText" name="postText" placeholder="Enter post" type="text" />
+        <button type="submit">Create Post</button>
+      </Form>
+    </Formik>
+  )
+}
