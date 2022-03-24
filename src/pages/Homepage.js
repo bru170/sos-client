@@ -1,12 +1,13 @@
 import React from "react"
 import FeaturedPosts from "./Blog/FeaturedPosts"
 import {Link} from "react-router-dom"
+import Header from "../components/Headers/Header"
 
 const Homepage = () => {
   return (
     <>
       <main>
-        <h1>Supporting Informal Welfare Work in the Digitized State</h1>
+        <Header header={"Supporting Informal Welfare Work in the Digitized State"} />
         <p>
           We are a Nordic research group that investigates informal support to citizens who struggle
           to access and use digital welfare services in Denmark, Norway, and Sweden. Digitalization
@@ -17,7 +18,7 @@ const Homepage = () => {
           and the kind of barriers citizens encounter.
         </p>
         <p>
-          This research project is funded by
+          This research project is funded by{" "}
           <a
             aria-label="link to NordForks webpage"
             href="https://www.nordforsk.org/projects/infrastructures-partially-digital-citizens-supporting-informal-welfare-work-digitized"
@@ -25,6 +26,7 @@ const Homepage = () => {
             Nordforsk
           </a>
         </p>
+        <br></br>
         <Link to={"./people"} aria-label="navigate to pepoles page">
           Meet the team behind the project
         </Link>

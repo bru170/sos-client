@@ -1,11 +1,12 @@
 import React from "react"
 import AllPosts from "./AllPosts"
+import Header from "../../components/Headers/Header"
 
 const Engagements = () => {
   return (
     <>
       <main>
-        <h1>Engagements</h1>
+        <Header header="Engagements" />
         <AllPosts />
       </main>
     </>
