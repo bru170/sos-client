@@ -1,32 +1,45 @@
-import React from "react"
-import classes from "./Header.module.scss"
+import React, {useState} from "react"
+import styles from "./Header.module.scss"
 import {BiMenuAltRight} from "react-icons/bi"
-import {AiOutlineClose} from "react-icons/ai"
+import {AiOutlineCloseSquare} from "react-icons/ai"
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const menuToggler = () => setMenuOpen((p) => !p)
+
   return (
-    <header className={classes.header}>
-      <div className={classes.header__content}>
-        <h1>Navbar</h1>
+    <div className={styles.header}>
+      <div className={styles.header__content}>
+        <div>
+          <span className={styles.logo}>
+            <a href={"/"}>SOS</a>
+          </span>
+        </div>
+        <div>
+          <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
+            <a className={styles.nav__item} href={"/people"}>
+              People
+            </a>
+            <a className={styles.nav__item} href={"/engagements"}>
+              Engagements
+            </a>
+            <a className={styles.nav__item} href={"/contact"}>
+              Contact
+            </a>
+          </nav>
+        </div>
+        <div>
+          <button className={styles.header__toggler} onClick={menuToggler}>
+            {!menuOpen ? <BiMenuAltRight /> : <AiOutlineCloseSquare />}
+          </button>
+        </div>
       </div>
-      <nav className={classes.header__content__nav}>
-        <ul>
-          <li>
-            <a href="/people">People</a>
-          </li>
-          <li>
-            <a href="/engagements">Engagements</a>
-          </li>
-          <li>
-            <a href="/contant">Contant</a>
-          </li>
-        </ul>
-        <button className={classes.header__content__navMobile}>
-          <BiMenuAltRight />
-        </button>
-      </nav>
-    </header>
+    </div>
   )
+}
+
+const Button = () => {
+  return <button className={styles.button}>Click me</button>
 }
 
 export default Header

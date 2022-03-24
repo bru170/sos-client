@@ -12,15 +12,20 @@ $linkFontSize: 1.25rem;
 $borderRadius: 8%;
 $outline: $primaryRed solid 3px;
 
-$spacing-md: 1rem;
-$spacing-ld: 2rem;
+$headerHeight: 70px;
 
-$headerHeight: 100px;
+$spacingSm: 8px;
+$spacingMd: 16px;
+$spacingLg: 32px;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
 
 @mixin breakpoint($point) {
   @if $point == md {
-    //768px / 48em
-    @media (mid-width: 48em) {
+    @media (min-width: $md) {
       @content;
     }
   }
