@@ -1,6 +1,5 @@
 import React from "react"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
-import AllPosts from "../Blog/AllPosts"
 import Homepage from "../Homepage"
 import {CreatePost} from "../Blog/CreatePost"
 import People from "../People/People"

@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.article {
+  & > ul {
+    list-style-type: none;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+}

@@ -1,5 +1,7 @@
 import axios from "axios"
 import {useEffect, useState} from "react"
+import Date from "../Date/Date"
+import styles from "./FeaturedPosts.module.scss"
 
 export const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([])
@@ -11,19 +13,20 @@ export const FeaturedPosts = () => {
   }, [])
 
   return (
-    <div className="Posts">
+    <article className={styles.article}>
       {featuredPosts.map((value) => {
         return (
           <ul key={value.id}>
             <li>
-              <div>{value.title}</div>
-              <div>{value.postText}</div>
-              <div>{value.author}</div>
+              <image>{value.image}</image>
+              <a href="/">{value.title}</a>
+              <br></br>
+              <Date date={value.updatedAt} />
             </li>
           </ul>
         )
       })}
-    </div>
+    </article>
   )
 }
 

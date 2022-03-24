@@ -1,5 +1,6 @@
 import axios from "axios"
 import {useEffect, useState} from "react"
+import styles from "./AllPosts.module.scss"
 
 export const AllPosts = () => {
   const [allPost, setAllPosts] = useState([])
@@ -11,19 +12,18 @@ export const AllPosts = () => {
   }, [])
 
   return (
-    <div className="Posts">
+    <article className={styles.article}>
       {allPost.map((value) => {
         return (
           <ul key={value.id}>
             <li>
               <div>{value.title}</div>
-              <div>{value.postText}</div>
               <div>{value.author}</div>
             </li>
           </ul>
         )
       })}
-    </div>
+    </article>
   )
 }
 
