@@ -12,10 +12,6 @@ body {
   font-family: $firaSans;
 }
 
-#root {
-  height: 100%;
-}
-
 main {
   padding-top: 150px;
   margin: 18px;
@@ -24,37 +20,37 @@ main {
 h1 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 h2 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 h3 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 h4 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 h5 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 h6 {
   font-size: $headerFontSize;
   font-weight: bolder;
-  color: $primaryRed;
+  color: $primaryDark;
 }
 
 a {

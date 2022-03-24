@@ -5,6 +5,7 @@ import Homepage from "../Homepage"
 import {CreatePost} from "../Blog/CreatePost"
 import People from "../People/People"
 import Contact from "../Contact/Contact"
+import Engagements from "../Blog/Engagements"
 
 export const Routing = () => {
   return (
@@ -13,7 +14,7 @@ export const Routing = () => {
         <Route path="/" exact element={<Homepage />} />
         <Route path="/createPost" element={<CreatePost />} />
         <Route path="/people" element={<People />} />
-        <Route path="/engagements" element={<AllPosts />} />
+        <Route path="/engagements" element={<Engagements />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

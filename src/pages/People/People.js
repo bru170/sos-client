@@ -5,9 +5,11 @@ import AllPeople from "./AllPeople"
 const People = () => {
   return (
     <>
-      <AddNewPerson />
-      <h1>Meet the People</h1>
-      <AllPeople />
+      <main>
+        <h1>Meet the People</h1>
+        <AllPeople />
+        <AddNewPerson />
+      </main>
     </>
   )
 }

@@ -1,9 +1,9 @@
 import React, {useState} from "react"
-import styles from "./Header.module.scss"
+import styles from "./Navbar.module.scss"
 import {BiMenuAltRight} from "react-icons/bi"
 import {AiOutlineCloseSquare} from "react-icons/ai"
 
-const Header = () => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuToggler = () => setMenuOpen((p) => !p)
 
@@ -38,8 +38,4 @@ const Header = () => {
   )
 }
 
-const Button = () => {
-  return <button className={styles.button}>Click me</button>
-}
-
-export default Header
+export default Navbar
