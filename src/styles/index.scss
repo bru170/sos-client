@@ -1,0 +1,82 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100px;
+  background-color: $primaryWhite;
+  color: $primaryDark;
+  font-family: $firaSans;
+}
+
+#root {
+  height: 100%;
+}
+
+h1 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+h2 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+h3 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+h4 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+h5 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+h6 {
+  font-size: $headerFontSize;
+  font-weight: bolder;
+  color: $primaryRed;
+}
+
+a {
+  text-decoration-color: $primaryRed;
+  color: $primaryRed;
+  font-size: $linkFontSize;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+a:active,
+a:hover {
+  text-decoration-color: $primaryRed;
+  color: $primaryRed;
+  font-size: $linkFontSize;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
+}
+
+a:focus {
+  outline: $outline;
+  border-radius: $borderRadius;
+  background-color: $primaryRed !important;
+  color: white !important;
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$firaSans: "Fira Sans", sans-serif;
+
+$primaryWhite: #f0f0f0;
+$primaryRed: #bb3355;
+$primaryDark: #2e2d2d;
+
+$headerFontSize: 1.5rem;
+$linkFontSize: 1.25rem;
+
+$borderRadius: 8%;
+$outline: $primaryRed solid 3px;
+
+$spacing-md: 1rem;
+$spacing-ld: 2rem;
+
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    //768px / 48em
+    @media (mid-width: 48em) {
+      @content;
+    }
+  }
+}
