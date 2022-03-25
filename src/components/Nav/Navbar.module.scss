@@ -21,6 +21,11 @@
     display: flex;
     align-items: center;
 
+    &__logo {
+      color: inherit;
+      text-decoration: none !important;
+    }
+
     & > div {
       flex: 1;
       white-space: nowrap;
@@ -28,9 +33,6 @@
       &:nth-child(2) {
         display: flex;
         justify-content: flex-end;
-        height: 100%;
-
-        margin-right: $spacingMd;
       }
       &:last-of-type {
         display: flex;
@@ -61,12 +63,6 @@
   }
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: 700;
-  color: $primaryDark;
-}
-
 .nav {
   width: 100%;
   position: fixed;
@@ -91,9 +87,6 @@
     height: 100%;
 
     transition: 0.3s ease color;
-    &:hover {
-      color: $primaryDark;
-    }
   }
 
   @include breakpoint(md) {
@@ -105,10 +98,13 @@
     padding: 0;
 
     &__item {
-      padding: 0 $spacingLg;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    &:active {
+      transform: scale(0.98);
     }
   }
 
@@ -132,7 +128,6 @@
 
   &:active {
     transform: scale(0.98);
-    border-radius: 0;
   }
   &:hover {
     box-shadow: 0 0 0.75em 0 $primaryDark;

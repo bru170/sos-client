@@ -2,6 +2,7 @@ import React from "react"
 import FeaturedPosts from "../components/FeaturedPost/FeaturedPosts"
 import {Link} from "react-router-dom"
 import Header from "../components/Headers/Header"
+import Title from "../components/Title/Title"
 
 const Homepage = () => {
   return (
@@ -33,8 +34,7 @@ const Homepage = () => {
         <Link to={"./createPost"} aria-label="navigate to pepoles page">
           Create Post
         </Link>
-        <br></br>
-        <br></br>
+        <Title title={"Latest Posts"} />
         <FeaturedPosts />
       </main>
     </>

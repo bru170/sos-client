@@ -8,20 +8,18 @@ const Navbar = () => {
   const menuToggler = () => setMenuOpen((p) => !p)
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.header__content}>
-        <div>
-          <span className={styles.logo}>
-            <a href={"/"}>SOS</a>
-          </span>
-        </div>
+        <a className={styles.header__content__logo} href={"/"}>
+          <h1>SOS</h1>
+        </a>
         <div>
           <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
-            <a className={styles.nav__item} href={"/people"}>
-              People
-            </a>
             <a className={styles.nav__item} href={"/engagements"}>
               Engagements
+            </a>
+            <a className={styles.nav__item} href={"/people"}>
+              People
             </a>
             <a className={styles.nav__item} href={"/contact"}>
               Contact
@@ -34,7 +32,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 
