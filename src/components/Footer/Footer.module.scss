@@ -2,28 +2,28 @@
 
 footer {
   margin-top: 1rem;
-  padding: 1rem;
   background-color: $primaryRed;
   bottom: 0;
   left: 0;
   width: 100%;
+}
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "sitemap" "designDevelop" "sponsors";
+.grid {
+  display: grid;
+  padding: 18px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "sitemap" "designDevelop" "sponsors";
 
-    &__sitemap {
-      grid-area: sitemap;
-    }
+  &__sitemap {
+    grid-area: sitemap;
+  }
 
-    &__designDevelop {
-      grid-area: designDevelop;
-    }
+  &__designDevelop {
+    grid-area: designDevelop;
+  }
 
-    &__sponsors {
-      grid-area: sponsors;
-    }
+  &__sponsors {
+    grid-area: sponsors;
   }
 }
 

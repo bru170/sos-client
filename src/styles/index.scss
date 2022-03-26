@@ -5,6 +5,11 @@
   margin: 0;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 body {
   width: 100%;
   background-color: $primaryWhite;
@@ -15,8 +20,11 @@ body {
 
 main {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   margin: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
 }
 
 h1 {

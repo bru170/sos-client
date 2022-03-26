@@ -19,7 +19,12 @@ export const AllPeople = () => {
             <li>
               <div>{value.name}</div>
               <div>{value.workPlace}</div>
-              <div>{value.email}</div>
+              <a
+                href={`mailto:${value.email}`}
+                aria-describedby="opens external mailing service for research project employee"
+              >
+                send an email to {value.email}
+              </a>
               <div>{value.bioText}</div>
               <img src={value.image} alt={"image of " + value.name} />
             </li>

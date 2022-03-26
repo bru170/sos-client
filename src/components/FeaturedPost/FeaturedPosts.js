@@ -1,6 +1,7 @@
 import axios from "axios"
 import {useEffect, useState} from "react"
 import Date from "../Date/Date"
+import {Link} from "react-router-dom"
 import styles from "./FeaturedPosts.module.scss"
 
 export const FeaturedPosts = () => {
@@ -19,7 +20,7 @@ export const FeaturedPosts = () => {
           <ul key={value.id}>
             <li>
               <image>{value.image}</image>
-              <a href="/">{value.title}</a>
+              <Link to={`/post/${value.id}`}>{value.title}</Link>
               <br></br>
               <Date date={value.updatedAt} />
             </li>
