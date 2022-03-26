@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<svg width="400" height="110" xmlns="http://www.w3.org/2000/svg">
+	<rect y="10%" width="150" height="50" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
+	<rect x="3%" y="0" width="150" height="50" style="fill:rgb(188,44,79);stroke-width:3;stroke:rgb(188,44,79)" />
+	<text x="5%" y="38%" font-size="3em" font-family="Fira Sans"  fill="white">SOS</text>
+</svg>
+

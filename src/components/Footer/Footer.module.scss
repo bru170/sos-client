@@ -4,8 +4,77 @@ footer {
   margin-top: 1rem;
   padding: 1rem;
   background-color: $primaryRed;
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "sitemap" "designDevelop" "sponsors";
+
+    &__sitemap {
+      grid-area: sitemap;
+    }
+
+    &__designDevelop {
+      grid-area: designDevelop;
+    }
+
+    &__sponsors {
+      grid-area: sponsors;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+  grid-gap: 1rem;
+
+  &__goth {
+    place-self: center;
+
+    &__img {
+      height: auto;
+      width: 250px;
+    }
+  }
+
+  &__gu {
+    place-self: center;
+
+    &__img {
+      height: auto;
+      width: 250px;
+    }
+  }
+
+  &__ager {
+    place-self: center;
+
+    &__img {
+      height: auto;
+      width: 250px;
+    }
+  }
+
+  &__itu {
+    place-self: center;
+
+    &__img {
+      height: auto;
+      width: 200px;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-right: 15px;
+  display: inline-block;
 }
