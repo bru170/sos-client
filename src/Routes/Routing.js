@@ -6,6 +6,8 @@ import People from "../pages/People/People"
 import Contact from "../pages/Contact/Contact"
 import Engagements from "../pages/Blog/Engagements"
 import Post from "../components/Posts/Post"
+import AccessibilityStatement from "../pages/AccessibilityStatement/AccessibilityStatement"
+import Cookies from "../pages/Cookies/Cookies"
 
 export const Routing = () => {
   return (
@@ -17,6 +19,8 @@ export const Routing = () => {
         <Route path="/people" element={<People />} />
         <Route path="/engagements" element={<Engagements />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
+        <Route path="/cookies" element={<Cookies />} />
       </Routes>
     </Router>
   )

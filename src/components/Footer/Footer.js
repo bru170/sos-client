@@ -14,6 +14,11 @@ const Footer = () => (
           <h3>Site Map</h3>
           <ul>
             <li>
+              <a style={{color: "white"}} href={"/home"}>
+                Home
+              </a>
+            </li>
+            <li>
               <a style={{color: "white"}} href={"/engagements"}>
                 Engagements
               </a>
@@ -33,6 +38,11 @@ const Footer = () => (
                 Cookie Policy
               </a>
             </li>
+            <li>
+              <a style={{color: "white"}} href={"/accessibility-statement"}>
+                Accessiblity Statement
+              </a>
+            </li>
           </ul>
         </div>
         <div className={styles.grid__designDevelop} style={{color: "white", paddingBottom: "20px"}}>
@@ -42,6 +52,17 @@ const Footer = () => (
         <div className={styles.grid__sponsors} style={{color: "white"}}>
           <h3>Sponsors</h3>
           <div className={styles.container}>
+            <a
+              className={styles.container__itu}
+              aria-label="opens webpage for our partner for ITU"
+              href="https://itu.dk/"
+            >
+              <img
+                className={styles.container__itu__img}
+                src={ITU}
+                alt="Logo for one of our sponsors ITU"
+              />
+            </a>
             <a
               className={styles.container__gu}
               aria-label="opens webpage for our partner center for digital welfare"
@@ -74,17 +95,6 @@ const Footer = () => (
                 className={styles.container__goth__img}
                 src={GOTHENBURGCUT}
                 alt="Logo for one of our sponsors University of Gothenburg"
-              />
-            </a>
-            <a
-              className={styles.container__itu}
-              aria-label="opens webpage for our partner for ITU"
-              href="https://itu.dk/"
-            >
-              <img
-                className={styles.container__itu__img}
-                src={ITU}
-                alt="Logo for one of our sponsors ITU"
               />
             </a>
           </div>

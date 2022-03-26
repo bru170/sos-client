@@ -25,33 +25,35 @@ export const CreatePost = () => {
   }
 
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-      {({setFieldValue}) => (
-        <Form>
-          <label htmlFor="inputAddTitle">Title</label>
-          <ErrorMessage name="title" component="span" />
-          <Field id="inputAddTitle" name="title" placeholder="Enter title" type="text" />
-          <label htmlFor="inputAddAuthor">Author</label>
-          <ErrorMessage name="author" component="span" />
-          <Field id="inputAddAuthor" name="author" placeholder="Enter author" type="text" />
-          <label htmlFor="inputAddPostText">Post</label>
-          <ErrorMessage name="postText" component="span" />
-          <Field id="inputAddPostText" name="postText" placeholder="Enter post" type="text" />
-          <label htmlFor="image">Image</label>
-          <ErrorMessage name="image" component="span" />
-          <input
-            id="featuredImage"
-            name="featuredImage"
-            placeholder="Upload featured Image"
-            type="file"
-            accept="image/*"
-            onChange={(event) => {
-              setFieldValue("featuredImage", event.target.files[0])
-            }}
-          />
-          <button type="submit">Create Post</button>
-        </Form>
-      )}
-    </Formik>
+    <main>
+      <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+        {({setFieldValue}) => (
+          <Form>
+            <label htmlFor="inputAddTitle">Title</label>
+            <ErrorMessage name="title" component="span" />
+            <Field id="inputAddTitle" name="title" placeholder="Enter title" type="text" />
+            <label htmlFor="inputAddAuthor">Author</label>
+            <ErrorMessage name="author" component="span" />
+            <Field id="inputAddAuthor" name="author" placeholder="Enter author" type="text" />
+            <label htmlFor="inputAddPostText">Post</label>
+            <ErrorMessage name="postText" component="span" />
+            <Field id="inputAddPostText" name="postText" placeholder="Enter post" type="text" />
+            <label htmlFor="image">Image</label>
+            <ErrorMessage name="image" component="span" />
+            <input
+              id="featuredImage"
+              name="featuredImage"
+              placeholder="Upload featured Image"
+              type="file"
+              accept="image/*"
+              onChange={(event) => {
+                setFieldValue("featuredImage", event.target.files[0])
+              }}
+            />
+            <button type="submit">Create Post</button>
+          </Form>
+        )}
+      </Formik>
+    </main>
   )
 }

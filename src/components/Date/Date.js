@@ -1,9 +1,9 @@
 import React from "react"
 import Moment from "react-moment"
 
-const Date = ({date}) => {
+const Date = ({format, date}) => {
   return (
-    <Moment format="MMMM D, YYYY" withTitle>
+    <Moment format={`${format}`} withTitle>
       {date}
     </Moment>
   )

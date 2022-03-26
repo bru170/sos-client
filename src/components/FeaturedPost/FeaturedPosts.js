@@ -22,7 +22,7 @@ export const FeaturedPosts = () => {
               <image>{value.image}</image>
               <Link to={`/post/${value.id}`}>{value.title}</Link>
               <br></br>
-              <Date date={value.updatedAt} />
+              <Date format={"MMMM D, YYYY"}>{value.updatedAt}</Date>
             </li>
           </ul>
         )

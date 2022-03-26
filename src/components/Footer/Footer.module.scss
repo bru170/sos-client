@@ -6,6 +6,10 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    padding-bottom: 20px;
+  }
 }
 
 .grid {
@@ -16,6 +20,10 @@ footer {
 
   & h3 {
     padding-bottom: 20px;
+
+    @media screen and (max-width: 800px) {
+      padding-bottom: 10px;
+    }
   }
 
   &__sitemap {
@@ -27,11 +35,18 @@ footer {
     }
 
     & ul li {
-      padding-right: 100px;
+      padding-right: 80px;
       display: inline-block;
 
+      & a {
+        @media screen and (max-width: 800px) {
+          font-size: 1.5rem;
+        }
+      }
+
       @media screen and (max-width: 800px) {
-        padding: 20px 70px 20px 60px;
+        display: flex;
+        padding-bottom: 10px;
       }
     }
   }
@@ -41,7 +56,7 @@ footer {
 
     & p {
       @media screen and (max-width: 800px) {
-        padding: 20px 70px 20px 60px;
+        font-size: 2rem;
       }
     }
   }
@@ -57,7 +72,7 @@ footer {
   grid-gap: 1rem;
 
   @media screen and (max-width: 800px) {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 
   &__goth {
@@ -69,7 +84,8 @@ footer {
 
       @media screen and (max-width: 800px) {
         height: auto;
-        width: 150px;
+        width: 380px;
+        padding-top: 30px;
       }
     }
   }
@@ -83,7 +99,7 @@ footer {
 
       @media screen and (max-width: 800px) {
         height: auto;
-        width: 170px;
+        width: 430px;
       }
     }
   }
@@ -97,7 +113,7 @@ footer {
 
       @media screen and (max-width: 800px) {
         height: auto;
-        width: 180px;
+        width: 460px;
       }
     }
   }
@@ -111,7 +127,8 @@ footer {
 
       @media screen and (max-width: 800px) {
         height: auto;
-        width: 150px;
+        width: 350px;
+        padding-top: 30px;
       }
     }
   }
