@@ -9,7 +9,10 @@ export const AddNewPerson = () => {
     workPlace: yup.string("Enter the workPlace").required("Work Place is required"),
     email: yup.string("Enter the email").required("Email is required"),
     bioText: yup.string("Enter the bio").required("Bio is required"),
-    image: yup.string("Upload an image").required("Image is required")
+    image: yup.string("Upload an image").required("Image is required"),
+    altText: yup
+      .string("If you upload an image, alt text is required")
+      .required("Alt text is required")
   })
 
   const initialValues = {
@@ -17,7 +20,8 @@ export const AddNewPerson = () => {
     workPlace: "",
     email: "",
     bioText: "",
-    image: ""
+    image: "",
+    altText: ""
   }
 
   const onSubmit = (data) => {
@@ -59,6 +63,9 @@ export const AddNewPerson = () => {
               setFieldValue("image", event.target.files[0])
             }}
           />
+          <label htmlFor="altText">About Text</label>
+          <ErrorMessage name="altText" component="span" />
+          <Field id="altText" name="altText" placeholder="Enter alt text" type="text" />
           <button type="submit">Add Team Member</button>
         </Form>
       )}

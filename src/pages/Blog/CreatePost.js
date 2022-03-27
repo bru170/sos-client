@@ -15,7 +15,10 @@ export const CreatePost = () => {
     username: "Barbara Ninos",
     author: "",
     postText: "",
-    featuredImage: {}
+    tags: "Accessibility",
+    categories: "News",
+    featuredImage: {},
+    featuredImageAltText: "Some alt text"
   }
 
   const onSubmit = (data) => {
