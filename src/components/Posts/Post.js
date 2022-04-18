@@ -21,7 +21,7 @@ const Post = () => {
         {post.title}
       </div> */}
       <article className={styles.article}>
-        <p>IMAGE HERE</p>
+        <p>{post.featureImageAltText}</p>
         <h2>{post.title}</h2>
         <p>
           Created on <Date format={"MMMM D, YYYY"}>{post.updatedAt}</Date> by{" "}

@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom"
 import * as yup from "yup"
 import axios from "axios"
 
-export const CreatePost = () => {
+export const Signup = () => {
   let navigate = useNavigate()
 
   const validationSchema = yup.object().shape({

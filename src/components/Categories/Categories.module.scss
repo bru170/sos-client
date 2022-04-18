@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.container {
+  & ul {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 0;
+  }
+
+  & li {
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  & p,
+  h2 {
+    padding-top: 20px;
+  }
+}

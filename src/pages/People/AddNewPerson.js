@@ -63,7 +63,7 @@ export const AddNewPerson = () => {
               setFieldValue("image", event.target.files[0])
             }}
           />
-          <label htmlFor="altText">About Text</label>
+          <label htmlFor="altText">Alt Text</label>
           <ErrorMessage name="altText" component="span" />
           <Field id="altText" name="altText" placeholder="Enter alt text" type="text" />
           <button type="submit">Add Team Member</button>
