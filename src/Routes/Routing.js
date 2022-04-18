@@ -8,12 +8,16 @@ import Engagements from "../pages/Blog/Engagements"
 import Post from "../components/Posts/Post"
 import AccessibilityStatement from "../pages/AccessibilityStatement/AccessibilityStatement"
 import Cookies from "../pages/Cookies/Cookies"
+import Login from "../components/Registration/login"
+import Signup from "../components/Registration/signup"
 
 export const Routing = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" exact element={<Homepage />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/signup" exact element={<Signup />} />
         <Route path="/createPost" element={<CreatePost />} />
         <Route path="/post/:id" element={<Post />} />
         <Route path="/people" element={<People />} />

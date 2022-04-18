@@ -4,62 +4,40 @@ import {useNavigate} from "react-router-dom"
 import * as yup from "yup"
 import axios from "axios"
 
-export const Login = () => {
+const Login = () => {
   let navigate = useNavigate()
 
   const validationSchema = yup.object().shape({
-    title: yup.string("Enter the title").required("Title is required").required(),
-    author: yup.string("Enter the author").required("Author is required").required(),
-    postText: yup.string("Enter the post").required("Post is required").required()
+    username: yup.string("Enter the user").required("Username is required").required(),
+    password: yup.string().required("Password is required")
   })
 
   const initialValues = {
-    title: "",
-    username: "Barbara Ninos",
-    author: "",
-    postText: "",
-    tags: "Accessibility",
-    categories: "News",
-    featuredImage: {},
-    featuredImageAltText: "Some alt text"
+    username: "",
+    password: ""
   }
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/posts", data).then((response) => {
-      navigate(`/engagements`)
+    axios.post("http://localhost:3001/auth/login", data).then((response) => {
+      navigate(`/`)
     })
   }
 
   return (
     <main>
       <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-        {({setFieldValue}) => (
-          <Form>
-            <label htmlFor="inputAddTitle">Title</label>
-            <ErrorMessage name="title" component="span" />
-            <Field id="inputAddTitle" name="title" placeholder="Enter title" type="text" />
-            <label htmlFor="inputAddAuthor">Author</label>
-            <ErrorMessage name="author" component="span" />
-            <Field id="inputAddAuthor" name="author" placeholder="Enter author" type="text" />
-            <label htmlFor="inputAddPostText">Post</label>
-            <ErrorMessage name="postText" component="span" />
-            <Field id="inputAddPostText" name="postText" placeholder="Enter post" type="text" />
-            <label htmlFor="image">Image</label>
-            <ErrorMessage name="image" component="span" />
-            <input
-              id="featuredImage"
-              name="featuredImage"
-              placeholder="Upload featured Image"
-              type="file"
-              accept="image/*"
-              onChange={(event) => {
-                setFieldValue("featuredImage", event.target.files[0])
-              }}
-            />
-            <button type="submit">Create Post</button>
-          </Form>
-        )}
+        <Form>
+          <label htmlFor="username">Username</label>
+          <ErrorMessage name="username" component="span" />
+          <Field id="username" name="username" placeholder="Enter username" type="text" />
+          <label htmlFor="password">Password</label>
+          <ErrorMessage name="password" component="span" />
+          <Field id="password" name="password" placeholder="Enter password" type="text" />
+          <button type="submit">Login</button>
+        </Form>
       </Formik>
     </main>
   )
 }
+
+export default Login
