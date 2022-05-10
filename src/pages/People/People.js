@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "../../components/Headers/Header"
-import {AddNewPerson} from "./AddNewPerson"
+import AddNewPerson from "./AddNewPerson"
 import AllPeople from "./AllPeople"
 
 const People = () => {

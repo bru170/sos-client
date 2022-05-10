@@ -1,9 +1,12 @@
 import React from "react"
 import {Formik, Field, Form, ErrorMessage} from "formik"
+import {useNavigate} from "react-router-dom"
 import * as yup from "yup"
 import axios from "axios"
 
-export const AddNewPerson = () => {
+const AddNewPerson = () => {
+  let navigate = useNavigate()
+
   const validationSchema = yup.object().shape({
     name: yup.string("Enter the name").required("Name is required"),
     workPlace: yup.string("Enter the workPlace").required("Work Place is required"),
@@ -28,6 +31,7 @@ export const AddNewPerson = () => {
     axios.post("http://localhost:3001/people", data).then((response) => {
       console.log("It worked", {data})
     })
+    navigate(`/`)
   }
 
   return (
@@ -72,3 +76,5 @@ export const AddNewPerson = () => {
     </Formik>
   )
 }
+
+export default AddNewPerson

@@ -40,7 +40,7 @@ const Signup = () => {
           <label htmlFor="password">Password</label>
           <ErrorMessage name="password" component="span" />
           <Field id="password" name="password" placeholder="Enter password" type="text" />
-          <button type="submit">Login</button>
+          <button type="submit">Signup</button>
         </Form>
       </Formik>
     </main>
