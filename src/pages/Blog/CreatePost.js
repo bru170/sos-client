@@ -15,7 +15,9 @@ export const CreatePost = () => {
 
   const initialValues = {
     title: "",
+
     username: "Barbara Ninos",
+
     author: "",
     postText: "",
     tags: "Accessibility",
@@ -25,9 +27,20 @@ export const CreatePost = () => {
   }
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/posts", data).then((response) => {
-      navigate(`/engagements`)
-    })
+    axios
+      .post("http://localhost:3001/posts", data, {
+        headers: {
+          accessToken: sessionStorage.getItem("accessToken")
+        }
+      })
+      .then((response) => {
+        if (response.data.error) {
+          alert("Error")
+        } else {
+          console.log({response})
+          navigate(`/engagements`)
+        }
+      })
   }
 
   return (

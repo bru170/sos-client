@@ -24,6 +24,9 @@ const Navbar = () => {
             <a className={styles.nav__item} href={"/contact"}>
               Contact
             </a>
+            <a className={styles.nav__item} href={"/login"}>
+              Login
+            </a>
           </nav>
         </div>
         <div>
