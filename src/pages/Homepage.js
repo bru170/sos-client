@@ -31,9 +31,6 @@ const Homepage = () => {
         <Link to={"./people"} aria-label="navigate to pepoles page">
           Meet the team behind the project
         </Link>
-        <Link to={"./createPost"} aria-label="navigate to pepoles page">
-          Create Post
-        </Link>
         <Title title={"Latest Posts"} />
         <FeaturedPosts />
       </main>

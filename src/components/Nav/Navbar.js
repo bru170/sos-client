@@ -1,11 +1,13 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 import styles from "./Navbar.module.scss"
 import {BiMenuAltRight} from "react-icons/bi"
 import {AiOutlineCloseSquare} from "react-icons/ai"
+import {AuthContextState} from "../../Utils/AuthContextState"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuToggler = () => setMenuOpen((p) => !p)
+  const {authState} = useContext(AuthContextState)
 
   return (
     <header className={styles.header}>
@@ -24,9 +26,13 @@ const Navbar = () => {
             <a className={styles.nav__item} href={"/contact"}>
               Contact
             </a>
-            <a className={styles.nav__item} href={"/login"}>
-              Login
-            </a>
+            {!authState && (
+              <>
+                <a className={styles.nav__item} href={"/login"}>
+                  Login
+                </a>
+              </>
+            )}
           </nav>
         </div>
         <div>

@@ -1,10 +1,12 @@
-import React from "react"
+import React, {useState, useContext} from "react"
 import {Formik, Field, Form, ErrorMessage} from "formik"
 import {useNavigate} from "react-router-dom"
 import * as yup from "yup"
 import axios from "axios"
+import {AuthContextState} from "../../Utils/AuthContextState"
 
 const Login = () => {
+  const {setAuthState} = useContext(AuthContextState)
   let navigate = useNavigate()
 
   const validationSchema = yup.object().shape({
@@ -22,7 +24,8 @@ const Login = () => {
       if (response.data.error) {
         alert(response.data.error)
       } else {
-        sessionStorage.setItem("accessToken", response.data)
+        localStorage.setItem("accessToken", response.data)
+        setAuthState(true)
         navigate(`/`)
       }
     })
