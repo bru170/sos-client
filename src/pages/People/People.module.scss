@@ -1,33 +1,17 @@
 @import "../../styles/variables.scss";
 
-.grid {
-  display: grid;
-  padding: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
-
-  &__imageBlock {
-    grid-area: imageB;
-
-    & img {
-      height: 250px;
-    }
-  }
-
-  &__textBLock {
-    grid-area: textB;
-  }
-
-  & h3 {
-    padding-bottom: 20px;
-  }
-
+.section {
   & ul {
     list-style-type: none;
     padding-left: 0;
   }
 
-  & ul li {
-    padding-right: 80px;
-    display: inline-block;
+  & li {
+    padding-bottom: 20px;
+  }
+
+  & p,
+  h2 {
+    padding-top: 20px;
   }
 }

@@ -7,7 +7,12 @@ import {AuthContextState} from "../../Utils/AuthContextState"
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuToggler = () => setMenuOpen((p) => !p)
-  const {authState} = useContext(AuthContextState)
+  const {authState, setAuthState} = useContext(AuthContextState)
+
+  const logout = () => {
+    localStorage.removeItem("accessToken")
+    setAuthState(false)
+  }
 
   return (
     <header className={styles.header}>
@@ -26,12 +31,12 @@ const Navbar = () => {
             <a className={styles.nav__item} href={"/contact"}>
               Contact
             </a>
-            {!authState && (
-              <>
-                <a className={styles.nav__item} href={"/login"}>
-                  Login
-                </a>
-              </>
+            {authState && (
+              <a className={styles.nav__item} href={"/login"}>
+                <button className={styles.nav__item} onClick={logout}>
+                  Logout
+                </button>
+              </a>
             )}
           </nav>
         </div>

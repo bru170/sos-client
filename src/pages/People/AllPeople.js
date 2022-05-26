@@ -1,7 +1,6 @@
 import axios from "axios"
 import {useEffect, useState} from "react"
 import styles from "./People.module.scss"
-import GOTHENBURG from "../../images/footerLogos/gothenburg.png"
 
 export const AllPeople = () => {
   const [allPeople, setAllPeople] = useState([])
@@ -17,17 +16,9 @@ export const AllPeople = () => {
     <>
       {allPeople.map((value) => {
         return (
-          <div className={styles.grid}>
+          <div className={styles.section}>
             <ul key={value.id}>
               <li>
-                <div className={styles.grid__imageBlock}>
-                  {/* <img src={value.image} alt={`${value.name} ${value.altText}`} /> */}
-                  <img
-                    src={GOTHENBURG}
-                    alt="Logo for one of our sponsors University of Gothenborg"
-                  />{" "}
-                </div>
-
                 <div className={styles.grid__textBlock}>
                   <div>{value.name}</div>
                   <div>{value.workPlace}</div>

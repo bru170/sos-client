@@ -15,9 +15,7 @@ export const CreatePost = () => {
 
   const initialValues = {
     title: "",
-
     username: "Barbara Ninos",
-
     author: "",
     postText: "",
     tags: "Accessibility",
