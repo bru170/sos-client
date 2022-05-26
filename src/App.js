@@ -7,7 +7,11 @@ import {useState, useEffect} from "react"
 import axios from "axios"
 
 function App() {
-  const [authState, setAuthState] = useState(false)
+  const [authState, setAuthState] = useState({
+    username: "",
+    id: 0,
+    status: false
+  })
 
   useEffect(() => {
     axios
@@ -18,9 +22,13 @@ function App() {
       })
       .then((response) => {
         if (response.data.error) {
-          setAuthState(false)
+          setAuthState({...authState, status: false})
         } else {
-          setAuthState(true)
+          setAuthState({
+            username: response.data.username,
+            id: response.data.id,
+            status: true
+          })
         }
       })
   }, [])

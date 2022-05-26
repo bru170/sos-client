@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.removeItem("accessToken")
-    setAuthState(false)
+    setAuthState({username: "", id: 0, status: false})
   }
 
   return (
@@ -19,6 +19,11 @@ const Navbar = () => {
       <div className={styles.header__content}>
         <a className={styles.header__content__logo} href={"/"}>
           <h1>SOS</h1>
+          {authState.status && (
+            <>
+              Welcome <p style={{textTransform: "capitalize"}}> {authState.username}</p>
+            </>
+          )}
         </a>
         <div>
           <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
@@ -31,12 +36,17 @@ const Navbar = () => {
             <a className={styles.nav__item} href={"/contact"}>
               Contact
             </a>
-            {authState && (
-              <a className={styles.nav__item} href={"/login"}>
-                <button className={styles.nav__item} onClick={logout}>
-                  Logout
-                </button>
-              </a>
+            {authState.status && (
+              <>
+                <a className={styles.nav__item} href={"/createPost"}>
+                  Create New Post
+                </a>
+                <a className={styles.nav__item} href={"/login"}>
+                  <button className={styles.nav__item} onClick={logout}>
+                    Logout
+                  </button>
+                </a>
+              </>
             )}
           </nav>
         </div>

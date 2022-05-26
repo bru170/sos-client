@@ -3,6 +3,7 @@ import {Formik, Field, Form, ErrorMessage} from "formik"
 import {useNavigate} from "react-router-dom"
 import * as yup from "yup"
 import axios from "axios"
+import Title from "../../components/Title/Title"
 
 export const CreatePost = () => {
   let navigate = useNavigate()
@@ -15,7 +16,7 @@ export const CreatePost = () => {
 
   const initialValues = {
     title: "",
-    username: "Barbara Ninos",
+    username: "",
     author: "",
     postText: "",
     tags: "Accessibility",
@@ -43,6 +44,7 @@ export const CreatePost = () => {
 
   return (
     <main>
+      <Title title="Add a new blog post" />
       <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
         {({setFieldValue}) => (
           <Form>

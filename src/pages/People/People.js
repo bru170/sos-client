@@ -12,10 +12,10 @@ const People = () => {
     <>
       <main>
         <Header header="Meet the People" />
-        <AllPeople />
-        {authState && (
+        <AllPeople auth={authState.status} />
+        {authState.status && (
           <>
-            <Title title="Add a new team member here:" />
+            <Title title="Add a new team member" />
             <AddNewPerson />
           </>
         )}

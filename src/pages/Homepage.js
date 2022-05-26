@@ -28,11 +28,14 @@ const Homepage = () => {
           </a>
         </p>
         <br></br>
-        <Link to={"./people"} aria-label="navigate to pepoles page">
+        <Link to={"./people"} aria-label="navigate to peoples page">
           Meet the team behind the project
         </Link>
         <Title title={"Latest Posts"} />
         <FeaturedPosts />
+        <Link to={"./engagements"} aria-label="navigate to all blog posts">
+          View all blog posts
+        </Link>
       </main>
     </>
   )
